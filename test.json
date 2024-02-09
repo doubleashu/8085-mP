@@ -1,0 +1,1508 @@
+{
+    "RAR": [
+      {
+        "test": "RAR A",
+        "result": { "Error": "NoArgumentError" }
+      },
+      {
+        "test": "RAR B",
+        "result": { "Error": "NoArgumentError" }
+      },
+      {
+        "test": "RAR A, 9050H",
+        "result":{ "Error": "NoArgumentError" }
+      },
+      {
+        "data": { "A": "05H" },
+        "test": "RAR",
+        "result": { "A": "82H", "C": 1 }
+      },
+      {
+        "test": "RAR C",
+        "result": { "Error": "NoArgumentError" }
+      },
+      {
+        "test": "RAR 3000H",
+        "result": { "Error": "NoArgumentError" }
+      },
+      {
+        "data": { "A": "0FH" },
+        "test": "RAR",
+        "result": { "A": "07H", "C": 1 }
+      },
+      {
+        "test": "RAR M",
+        "result": { "Error": "NoArgumentError" }
+      },
+      {
+        "test": "RAR 9050H",
+        "result": { "Error": "NoArgumentError" }
+      },
+      {
+        "data": { "A": "80H" },
+        "test": "RAR",
+        "result": { "A": "40H", "C": 1 }
+      },
+      {
+        "test": "RAR 4000H",
+        "result": { "Error": "NoArgumentError" }
+      }
+    ],
+
+    "MOV":[
+        {
+            "test": "MOV A, 80H",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "MOV B, 80H",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "data": { "B": "60H" },
+            "test": "MOV A, B",
+            "result": { "A": "60H"}
+        },
+        {
+            "data": { "C": "60H" },
+            "test": "MOV A, C",
+            "result": { "A": "60H"}
+        },
+        {
+            "data": { "D": "60H" },
+            "test": "MOV A, D",
+            "result": { "A": "60H"}
+        },
+        {
+            "data": { "E": "60H" },
+            "test": "MOV A, E",
+            "result": { "A": "60H"}
+        },
+        {
+            "data": { "A": "60H" },
+            "test": "MOV B, A",
+            "result": { "B": "60H"}
+        },
+        {
+            "data": { "C": "60H" },
+            "test": "MOV B, C",
+            "result": { "B": "60H"}
+        },
+        {
+            "data": { "D": "60H" },
+            "test": "MOV B, D",
+            "result": { "B": "60H"}
+        },
+        {
+            "data": { "E": "60H" },
+            "test": "MOV B, E",
+            "result": { "B": "60H"}
+        },
+        {
+            "data": { "A": "60H" },
+            "test": "MOV C, A",
+            "result": { "C": "60H"}
+        },
+        {
+            "data": { "B": "60H" },
+            "test": "MOV C, B",
+            "result": { "C": "60H"}
+        },
+        {
+            "data": { "D": "60H" },
+            "test": "MOV C, D",
+            "result": { "C": "60H"}
+        },
+        {
+            "data": { "E": "60H" },
+            "test": "MOV C, E",
+            "result": { "C": "60H"}
+        },
+        {
+            "data": { "A": "60H" },
+            "test": "MOV D, A",
+            "result": { "D": "60H"}
+        },
+        {
+            "data": { "B": "60H" },
+            "test": "MOV D, B",
+            "result": { "D": "60H"}
+        },
+        {
+            "data": { "C": "60H" },
+            "test": "MOV D, C",
+            "result": { "D": "60H"}
+        },
+        {
+            "data": { "E": "60H" },
+            "test": "MOV D, E",
+            "result": { "D": "60H"}
+        },
+        {
+            "data": { "A": "60H" },
+            "test": "MOV E, A",
+            "result": { "E": "60H"}
+        },
+        {
+            "data": { "B": "60H" },
+            "test": "MOV E, B",
+            "result": { "E": "60H"}
+        },
+        {
+            "data": { "C": "60H" },
+            "test": "MOV E, C",
+            "result": { "E": "60H"}
+        },
+        {
+            "data": { "D": "60H" },
+            "test": "MOV E, D",
+            "result": { "E": "60H"}
+        },
+        {
+            "test": "MOV A, A",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "MOV B, B",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "MOV C, C",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "MOV D, D",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "MOV E, E",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "MOV A, 8050H",
+            "result": { "Error": "SyntaxError" }
+        }
+    ],
+
+    "MVI":[
+        {
+            "test": "MVI A, 80H",
+            "result": { "A": "80H"}
+        },
+        {
+            "test": "MVI B, 80H",
+            "result": { "B": "80H"}
+        },
+        {
+            "test": "MVI C, 80H",
+            "result": { "C": "80H"}
+        },
+        {
+            "test": "MVI D, 80H",
+            "result": { "D": "80H"}
+        },
+        {
+            "test": "MVI E, 80H",
+            "result": { "E": "80H"}
+        },
+        {
+            "test": "MVI A, 8050H",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "MVI A, B",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "MVI ",
+            "result": { "Error": "NoArgumentError" }
+        }
+
+    ],
+
+    "LXI":[
+        {
+            "test": "LXI H, 2030H",
+            "result": { "H": "20", "L": "30" }
+        },
+        {
+            "test": "LXI D, 1020H",
+            "result": { "D": "10", "E": "20" }
+        },
+        {
+            "test": "LXI B, 0050H",
+            "result": { "B": "00", "C": "50" }
+        },
+        {
+            "test": "LXI SP, FFFFH",
+            "result": { "SP": "FFFF" }
+        },
+        {
+            "test": "LXI H, FFFFH",
+            "result": { "Error": "AddressError" }
+        },
+        {
+            "test": "LXI D, 12345H",
+            "result": { "Error": "AddressError" }
+        },
+        {
+            "test": "LXI B, 123H",
+            "result": { "Error": "DataError" }
+        },
+        {
+            "test": "LXI H",
+            "result": { "Error": "NoArgumentError" }
+        }
+    ],
+
+    "STA":[
+        {   "data":{"A":"A0H"},
+            "test": "STA 2000H",
+            "result":{ "2000H": "A0H" }
+        },
+        {
+            "data":{"A":"B0H"},
+            "test": "STA 3000H",
+            "result": { "3000H": "B0H" }
+        },
+        {
+            "test": "STA A0H",
+            "result": { "Error": "DataError" }
+        },
+        {
+            "test": "STA ",
+            "result": { "Error": "TypeError" }
+        },
+        {
+            "test": "STA A",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "STA B",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "STA DE",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "STA M",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "STA, A0H",
+            "result": { "Error": "SyntaxError" }
+        }
+    ],
+
+    "LDA":[
+        {
+            "data": {"8000H": "00H"},
+            "test": "LDA 8000H",
+            "result": { "A": "00H" }
+        },
+        {
+            "data": {"8000H": "10H"},
+            "test": "LDA 8000H",
+            "result": { "A": "10H" }
+        },
+        {
+            "data": {"8000H": "FFH"},
+            "test": "LDA 8000H",
+            "result": { "A": "FFH" }
+        },
+        {
+            "test": "LDA ",
+            "result": { "Error": "TypeError" }
+        },
+        {
+            "test": "LDA A",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "LDA 8000H",
+            "result": { "Error": "MemoryError" }
+        },
+        {
+            "test": "LDA 123H",
+            "result": { "Error": "AddressError" }
+        },
+        {
+            "test": "LDA 82345H",
+            "result": { "Error": "AddressError" }
+        },
+        {
+            "test": "LDA, 8000H",
+            "result": { "Error": "SyntaxError" }
+        }
+    ],
+
+    "LHLD":[
+        {
+            "data": {"8000H": "60H", "8001H": "70H"},
+            "test": "LHLD 8000H",
+            "result": { "H": "70H", "L": "60H" }
+        },
+        {
+            "data": {"8000H": "FFH", "8001H": "FFH"},
+            "test": "LHLD 8000H",
+            "result": { "H": "FFH", "L": "FFH" }
+        },
+        {
+            "test": "LHLD ",
+            "result": { "Error": "NoArgumentError" }
+        },
+        {
+            "test": "LHLD B",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "LHLD, 8000H",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "LHLD F",
+            "result": { "Error": "RegisterError" }
+        }
+    ],
+
+    "SHLD":[
+        {
+            "data": { "H": "70H", "L": "60H" },
+            "test": "SHLD 8000H",
+            "result": {"8000H": "60H", "8001H": "70H" }
+        },
+        {
+            "data": { "H": "FFH", "L": "FFH" },
+            "test": "SHLD 8000H",
+            "result": {"8000H": "FFH", "8001H": "FFH" }
+        },
+        {
+            "test": "SHLD FFFFH",
+            "result": { "Error": "AddressError" }
+        },
+        {
+            "test": "SHLD, 8000H",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "SHLD",
+            "result": { "Error": "TypeError" }
+        },
+        {
+            "test": "SHLD H",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "SHLD F",
+            "result": { "Error": "RegisterError" }
+        }
+    ],
+
+    "LDAX":[
+        {
+            "data": {"8000H": "50H", "B": "80H", "C": "00H" },
+            "test": "LDAX B",
+            "result": { "A": "50H" }
+        },
+        {
+            "data": {"8000H": "A0H", "D": "40H", "E": "00H" },
+            "test": "LDAX D",
+            "result": { "A": "A0H" }
+        },
+        {
+            "data": {"8000H": "FFH", "H": "80H", "L": "00H" },
+            "test": "LDAX H",
+            "result": { "A": "FFH" }
+        },
+        {
+            "test": "LDAX ",
+            "result": { "Error": "TypeError" }
+        },
+        {
+            "test": "LDAX HL",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "LDAX 8000H ",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "LDAX, C",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "LDAX F",
+            "result": { "Error": "RegisterError" }
+        }
+    ],
+
+    "STAX":[
+        {
+            "data": { "A": "50H", "B": "80H", "C": "00H" },
+            "test": "STAX B",
+            "result": {"8080H": "50H" } 
+        },
+        {
+            "data": { "A": "A0H", "D": "40H", "E": "00H" },
+            "test": "STAX D",
+            "result": {"4040H": "A0H" } 
+        },
+        {
+            "data": { "A": "FFH", "H": "80H", "L": "00H" },
+            "test": "STAX H",
+            "result": {"8080H": "FFH" } 
+        },
+        {
+            "test": "STAX F",
+            "result": { "Error": "RegisterError" }
+        },    
+        {
+            "test": "LDAX HL",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "LDAX 8000H ",
+            "result": { "Error": "SyntaxError" }
+        }                                                                                                                                                                                                                                                       
+    ],
+
+    "XCHG":[
+        {
+            "data": { "H": "12H", "L": "34H", "D": "56H", "E": "78H" },
+            "test": "XCHG",
+            "result": { "H": "56H", "L": "78H", "D": "12H", "E": "34H" }
+        },
+        {
+            "data": { "H": "FFH", "L": "FFH", "D": "00H", "E": "00H" },
+            "test": "XCHG",
+            "result": { "H": "00H", "L": "00H", "D": "FFH", "E": "FFH" }
+        },
+        {
+        "test": "XCHG H",
+        "result": { "Error": "NoArgumentError"}
+        }
+    ],
+
+        "ADD":[
+            {
+                "data": { "A": "10H", "B": "20H" },
+                "test": "ADD B",
+                "result": { "A": "30H","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0" }
+            },
+            {
+                "data": { "A": "FFH", "B": "01H" },
+                "test": "ADD B",
+                "result": { "A": "00H","C": "1", "AC": "1", "Z": "1", "S": "0", "P": "1" }
+            },
+            {
+                "data": { "A": "7FH", "C": "80H" },
+                "test": "ADD C",
+                "result": { "A": "FFH","C": "1", "AC": "0", "Z": "0", "S": "1", "P": "1" }
+            },
+            {
+                "data": { "A": "7FH", "D": "01H" },
+                "test": "ADD D",
+                "result": { "A": "80H","C": "0", "AC": "1", "Z": "0", "S": "1", "P": "0" }
+            },
+            {
+                "data": { "A": "7FH", "E": "FFH" },
+                "test": "ADD E",
+                "result": { "A": "7EH","C": "1", "AC": "0", "Z": "0", "S": "0", "P": "0" }
+            },
+            {
+                "data": { "A": "7FH", "H": "80H" },
+                "test": "ADD H",
+                "result": { "A": "FFH","C": "1", "AC": "0", "Z": "0", "S": "1", "P": "1" }
+            },
+            {
+                "data": { "A": "7FH", "L": "7FH" },
+                "test": "ADD L",
+                "result": { "A": "FEH","C": "0", "AC": "1", "Z": "0", "S": "1", "P": "0" }
+            },
+            {
+                "data": { "A": "80H", "B": "80H" },
+                "test": "ADD B",
+                "result": { "A": "00H","C": "1", "AC": "1", "Z": "1", "S": "0", "P": "1" }
+            },
+            {
+                "test": "ADD F",
+                "result": { "Error": "RegisterError" }
+            },
+            {
+                "test": "ADD 80H",
+                "result": { "Error": "SyntaxError" }
+            },
+            {
+                "test": "ADD ",
+                "result": { "Error": "TypeError" }
+            },
+            {
+                "test": "ADD, B",
+                "result": { "Error": "SyntaxError" }
+            }
+        ],
+
+
+  "ADC":[
+      {
+          "data": { "A": "10H", "B": "20H","C": "0" },
+          "test": "ADC B",
+          "result": { "A": "30H","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0" } 
+      },
+      {
+          "data": { "A": "FFH", "B": "01H","C": "0" },
+          "test": "ADC B",
+          "result": { "A": "00H","C": "1", "AC": "1", "Z": "1", "S": "0", "P": "1" }
+      },
+      {
+          "data": { "A": "7FH", "D": "80H","C": "1" },
+          "test": "ADC D",
+          "result": { "A": "FFH","C": "1", "AC": "0", "Z": "0", "S": "1", "P": "1" }
+      },
+      {
+          "data": { "A": "7FH", "D": "01H","C": "0" },
+          "test": "ADC D",
+          "result": { "A": "80H","C": "0", "AC": "1", "Z": "0", "S": "1", "P": "0" }
+      },
+      {
+          "data": { "A": "7FH", "E": "FFH","C": "1"},
+          "test": "ADC E",
+          "result": { "A": "7EH","C": "1", "AC": "0", "Z": "0", "S": "0", "P": "0"}
+      },
+      {
+          "data": { "A": "7FH", "H": "80H","C": "1" },
+          "test": "ADC H",
+          "result": { "A": "FFH","C": "1", "AC": "0", "Z": "0", "S": "1", "P": "1" }
+      },
+      {
+          "data": { "A": "7FH", "L": "7FH","C": "0" },
+          "test": "ADC L",
+          "result": { "A": "FEH","C": "0", "AC": "1", "Z": "0", "S": "1", "P": "0" }
+      },
+      {
+          "data": { "A": "80H", "B": "80H","C": "1" },
+          "test": "ADC B",
+          "result": { "A": "01H","C": "1", "AC": "1", "Z": "0", "S": "0", "P": "0" }
+      },
+      {
+        "test": "ADC F",
+        "result": { "Error": "RegisterError" }
+    },
+    {
+        "test": "ADC 80H",
+        "result": { "Error": "SyntaxError" }
+    },
+    {
+        "test": "ADC ",
+        "result": { "Error": "TypeError" }
+    },
+    {
+        "test": "ADC, B",
+        "result": { "Error": "SyntaxError" }
+    }
+  ],
+
+    "ADI":[
+        {
+            "data": { "A": "10H" },
+            "test": "ADI 20H",
+            "result": { "A": "30H","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0"}
+        },
+        {
+            "data": { "A": "FFH" },
+            "test": "ADI 01H",
+            "result": { "A": "00H","C": "1", "AC": "1", "Z": "1", "S": "0", "P": "1"}
+        },
+        {
+            "data": { "A": "7FH" },
+            "test": "ADI 80H",
+            "result": { "A": "FFH","C": "1", "AC": "0", "Z": "0", "S": "1", "P": "1"}
+        },
+        {
+            "data": { "A": "7FH" },
+            "test": "ADI 01H",
+            "result": { "A": "80H","C": "0", "AC": "1", "Z": "0", "S": "1", "P": "0"}
+        },
+        {
+            "data": { "A": "7FH" },
+            "test": "ADI FFH",
+            "result": { "A": "7EH","C": "1", "AC": "0", "Z": "0", "S": "0", "P": "0"}
+        },
+        {
+            "data": { "A": "80H" },
+            "test": "ADI 80H",
+            "result": { "A": "00H","C": "1", "AC": "1", "Z": "1", "S": "0", "P": "1"}
+        },
+        {
+            "test": "ADI B",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "ADI ",
+            "result": { "Error": "TypeError" }
+        },
+        {
+            "test": "ADI, 80H",
+            "result": { "Error": "SyntaxError" }
+        }
+    ],
+
+  "ACI":[
+      {
+          "data": { "A": "10H","C": "0" },
+          "test": "ACI 20H",
+          "result": { "A": "30H","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0" }
+      },
+      {
+          "data": { "A": "FFH","C": "0"  },
+          "test": "ACI 01H",
+          "result": { "A": "00H","C": "1", "AC": "1", "Z": "1", "S": "0", "P": "1" }
+      },
+      {
+          "data": { "A": "7FH","C": "1"  },
+          "test": "ACI 80H",
+          "result": { "A": "FFH","C": "1", "AC": "0", "Z": "0", "S": "1", "P": "1"  }
+      },
+      {
+          "data": { "A": "7FH","C": "0"  },
+          "test": "ACI 01H",
+          "result": { "A": "80H","C": "0", "AC": "1", "Z": "0", "S": "1", "P": "0" }
+      },
+      {
+          "data": { "A": "7FH","C": "1"  },
+          "test": "ACI FFH",
+          "result": { "A": "7EH","C": "1", "AC": "0", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+          "data": { "A": "80H","C": "1"  },
+          "test": "ACI 80H",
+          "result": { "A": "01H","C": "1", "AC": "1", "Z": "0", "S": "0", "P": "0" }
+      },
+      {
+        "test": "ACI B",
+        "result": { "Error": "SyntaxError" }
+    },
+    {
+        "test": "ACI ",
+        "result": { "Error": "TypeError" }
+    },
+    {
+        "test": "ACI, 80H",
+        "result": { "Error": "SyntaxError" }
+    }
+  ],
+
+    "DAD":[
+        {
+            "data": { "H": "12H", "L": "34H", "D": "56H", "E": "78H" },
+            "test": "DAD H",
+            "result": { "H": "12H", "L": "34H","C": "0" }
+        },
+        {
+            "data": { "H": "FFH", "L": "FFH", "D": "01H", "E": "00H" },
+            "test": "DAD D",
+            "result": { "H": "00H", "L": "00H","C": "1" }
+        },
+        {
+            "test": "DAD B",
+            "result": { "Error": "NoArgumentError" }
+        },
+        {
+            "test": "DAD 80H",
+            "result": { "Error": "SyntaxError" }
+        }
+    ],
+
+    "SUB":[
+        {
+            "data": { "A": "30H", "B": "20H" },
+            "test": "SUB B",
+            "result": { "A": "10H","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0" }
+        },
+        {
+            "data": { "A": "00H", "B": "01H" },
+            "test": "SUB B",
+            "result": { "A": "FFH","C": "1", "AC": "1", "Z": "0", "S": "1", "P": "1" }
+        },
+        {
+            "data": { "A": "80H", "C": "80H" },
+            "test": "SUB C",
+            "result": { "A": "00H","C": "1", "AC": "1", "Z": "1", "S": "0", "P": "1"}
+        },
+        {
+            "test": "SUB ",
+            "result": { "Error": "TypeError" }
+        },
+        {
+            "test": "SUB 80H",
+            "result": { "Error": "SyntaxError" }
+        }
+    ],
+
+  "SBB":[
+      {
+          "data": { "A": "30H", "B": "20H","C": "0" },
+          "test": "SBB B",
+          "result": { "A": "0FH","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "1"}
+      },
+      {
+          "data": { "A": "00H", "B": "01H","C": "0" },
+          "test": "SBB B",
+          "result": { "A": "FFH","C": "1", "AC": "1", "Z": "0", "S": "1", "P": "1" }
+      },
+      {
+          "data": { "A": "80H", "D": "80H","C": "1" },
+          "test": "SBB D",
+          "result": { "A": "FFH","C": "1", "AC": "1", "Z": "0", "S": "1", "P": "1" }
+      },
+      {
+        "test": "SBB ",
+        "result": { "Error": "TypeError" }
+      },
+      {
+        "test": "SBB 80H",
+        "result": { "Error": "SyntaxError" }
+      },
+      {
+        "test": "SBB F",
+        "result": { "Error": "RegisterError" }
+      }
+  ],
+
+    "SUI":[
+        {
+            "data": { "A": "30H" },
+            "test": "SUI 20H",
+            "result": { "A": "10H","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0"}
+        },
+        {
+            "data": { "A": "00H" },
+            "test": "SUI 01H",
+            "result": { "A": "FFH","C": "1", "AC": "1", "Z": "0", "S": "1", "P": "1" }
+        },
+        {
+            "data": { "A": "80H" },
+            "test": "SUI 80H",
+            "result": { "A": "00H","C": "1", "AC": "1", "Z": "1", "S": "0", "P": "1" }
+        },
+        {
+            "test": "SUI B",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "SUI ",
+            "result": { "Error": "TypeError" }
+        },
+        {
+            "test": "SUI, 80H",
+            "result": { "Error": "SyntaxError" }
+        }
+    ],
+
+    "SBI":[
+        {
+            "data": { "A": "30H","C": "0" },
+            "test": "SBI 20H",
+            "result": { "A": "10H","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0" }
+        },
+        {
+            "data": { "A": "00H","C": "0" },
+            "test": "SBI 01H",
+            "result": { "A": "FFH","C": "1", "AC": "1", "Z": "0", "S": "1", "P": "1" }
+        },
+        {
+            "data": { "A": "80H","C": "1" },
+            "test": "SBI 80H",
+            "result": { "A": "00H","C": "1", "AC": "1", "Z": "1", "S": "0", "P": "1" }
+        },
+        {
+            "test": "SBI B",
+            "result": { "Error": "SyntaxError" }
+        },
+        {
+            "test": "SBI ",
+            "result": { "Error": "TypeError" }
+        },
+        {
+            "test": "SBI, 80H",
+            "result": { "Error": "SyntaxError" }
+        }
+    ],
+
+    
+  "INR":[
+      {
+          "data": { "B": "0AH" },
+          "test": "INR B",
+          "result": { "B": "0BH","AC": "0", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+          "data": { "C": "7FH" },
+          "test": "INR C",
+          "result": { "C": "80H","AC": "1", "Z": "0", "S": "1", "P": "0"  }
+      },
+      {
+          "data": { "D": "FFH" },
+          "test": "INR D",
+          "result": { "D": "00H","AC": "1", "Z": "1", "S": "0", "P": "1"  }
+      },
+      {
+          "data": { "E": "80H" },
+          "test": "INR E",
+          "result": { "E": "81H","AC": "0", "Z": "0", "S": "0", "P": "1"  }
+      },
+      {
+          "data": { "H": "7EH" },
+          "test": "INR H",
+          "result": { "H": "7FH","AC": "1", "Z": "0", "S": "0", "P": "1"  }
+      },
+      {
+        "test": "INR ",
+        "result": { "Error": "TypeError" }
+      },
+      {
+        "test": "INR 80H",
+        "result": { "Error": "SyntaxError" }
+      },
+      {
+        "test": "INR F",
+        "result": { "Error": "RegisterError" }
+      }
+  ],
+
+  "DCR":[
+      {
+          "data": { "B": "0BH" },
+          "test": "DCR B",
+          "result": { "B": "0AH","AC": "0", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+          "data": { "C": "80H" },
+          "test": "DCR C",
+          "result": { "C": "7FH","AC": "1", "Z": "0", "S": "1", "P": "0"  }
+      },
+      {
+          "data": { "D": "00H" },
+          "test": "DCR D",
+          "result": { "D": "FFH","AC": "1", "Z": "0", "S": "1", "P": "0"  }
+      },
+      {
+          "data": { "E": "01H" },
+          "test": "DCR E",
+          "result": { "E": "00H","AC": "0", "Z": "1", "S": "0", "P": "1"  }
+      },
+      {
+          "data": { "H": "7FH" },
+          "test": "DCR H",
+          "result": { "H": "7EH","AC": "1", "Z": "0", "S": "0", "P": "1"  }
+      },
+      {
+        "test": "DCR ",
+        "result": { "Error": "TypeError" }
+      },
+      {
+        "test": "DCR 80H",
+        "result": { "Error": "SyntaxError" }
+      },
+      {
+        "test": "DCR F",
+        "result": { "Error": "RegisterError" }
+      }
+  ],
+
+  "INX":[
+      {
+          "data": { "H": "00H", "L": "FFH" },
+          "test": "INX H",
+          "result": { "H": "01H", "L": "00H" }
+      },
+      {
+          "data": { "D": "FFH", "E": "FFH" },
+          "test": "INX D",
+          "result": { "D": "00H", "E": "00H" }
+      },
+      {
+          "data": { "H": "FFH", "L": "FFH" },
+          "test": "INX H",
+          "result": { "H": "00H", "L": "00H" }
+      },
+      {
+          "data": { "D": "00H", "E": "00H" },
+          "test": "INX D",
+          "result": { "D": "00H", "E": "01H" }
+      },
+      {
+          "data": { "H": "7FH", "L": "FFH" },
+          "test": "INX H",
+          "result": { "H": "80H", "L": "00H" }
+      },
+      {
+        "test": "INX ",
+        "result": { "Error": "TypeError" }
+      },
+      {
+        "test": "INX 80H",
+        "result": { "Error": "SyntaxError" }
+      },
+      {
+        "test": "INX F",
+        "result": { "Error": "RegisterError" }
+      }
+  ],
+
+  "DCX":[
+      {
+          "data": { "H": "01H", "L": "00H" },
+          "test": "DCX H",
+          "result": { "H": "00H", "L": "FFH" }
+      },
+      {
+          "data": { "D": "00H", "E": "01H" },
+          "test": "DCX D",
+          "result": { "D": "00H", "E": "00H" }
+      },
+      {
+          "data": { "H": "00H", "L": "00H" },
+          "test": "DCX H",
+          "result": { "H": "FFH", "L": "FFH" }
+      },
+      {
+          "data": { "D": "00H", "E": "00H" },
+          "test": "DCX D",
+          "result": { "D": "FFH", "E": "FFH" }
+      },
+      {
+          "data": { "H": "80H", "L": "00H" },
+          "test": "DCX H",
+          "result": { "H": "7FH", "L": "FFH" }
+      },
+      {
+        "test": "DCX ",
+        "result": { "Error": "TypeError" }
+      },
+      {
+        "test": "DCX 80H",
+        "result": { "Error": "SyntaxError" }
+      },
+      {
+        "test": "DCX F",
+        "result": { "Error": "RegisterError" }
+      },
+
+      {
+        "test": "DCX 8050H",
+        "result": { "Error": "SyntaxError" }
+      }
+  ],
+
+    "ANA": [
+      {
+        "data": { "A": "A5H", "B": "55H" },
+        "test": "ANA B",
+        "result": { "A": "05H","C": "0", "AC": "1", "Z": "0", "S": "0", "P": "1"  }
+      },
+      {
+        "data": { "A": "FFH", "C": "00H" },
+        "test": "ANA C",
+        "result": { "A": "00H","C": "0", "AC": "0", "Z": "1", "S": "0", "P": "1"  }
+      },
+      {
+        "data": { "A": "0FH", "Memory": { "8000H": "03H" } },
+        "test": "ANA M",
+        "result": { "A": "03H","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+        "data": { "A": "55H" },
+        "test": "ANA A",
+        "result": { "A": "55H","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+        "data": { "A": "AAH", "B": "FFH" },
+        "test": "ANA B",
+        "result": { "A": "AAH","C": "0", "AC": "1", "Z": "0", "S": "1", "P": "0"  }
+      },
+      {
+        "test": "ANA 80H",
+        "result": { "Error": "SyntaxError" }
+      },
+      {
+        "test": "ANA F",
+        "result": { "Error": "RegisterError" }
+      },
+
+      {
+        "test": "ANA 8050H",
+        "result": { "Error": "SyntaxError" }
+      }
+    ],
+
+    "ORA": [
+      {
+        "data": { "A": "A5H", "B": "55H" },
+        "test": "ORA B",
+        "result": { "A": "F5H","C": "0", "AC": "0", "Z": "0", "S": "1", "P": "0"  }
+      },
+      {
+        "data": { "A": "FFH", "C": "00H" },
+        "test": "ORA C",
+        "result": { "A": "FFH","C": "0", "AC": "0", "Z": "1", "S": "1", "P": "0"  }
+      },
+      {
+        "data": { "A": "0FH", "Memory": { "8000H": "03H" } },
+        "test": "ORA M",
+        "result": { "A": "0FH","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+        "data": { "A": "55H" },
+        "test": "ORA A",
+        "result": { "A": "55H","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+        "data": { "A": "AAH", "B": "FFH" },
+        "test": "ORA B",
+        "result": { "A": "FFH","C": "0", "AC": "0", "Z": "1", "S": "1", "P": "0"  }
+      },
+      {
+        "test": "ORA 80H",
+        "result": { "Error": "SyntaxError" }
+      },
+      {
+        "test": "ORA F",
+        "result": { "Error": "RegisterError" }
+      },
+
+      {
+        "test": "ORA 8050H",
+        "result": { "Error": "SyntaxError" }
+      }
+    ],
+
+    "ORI": [
+      {
+        "data": { "A": "A5H" },
+        "test": "ORI 55H",
+        "result": { "A": "F5H","C": "0", "AC": "0", "Z": "0", "S": "1", "P": "0"  }
+      },
+      {
+        "data": { "A": "FFH" },
+        "test": "ORI FFH",
+        "result": { "A": "FFH","C": "0", "AC": "0", "Z": "1", "S": "1", "P": "0"  }
+      },
+      {
+        "data": { "A": "0FH" },
+        "test": "ORI 03H",
+        "result": { "A": "0FH","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+        "data": { "A": "55H" },
+        "test": "ORI 00H",
+        "result": { "A": "55H","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+        "data": { "A": "AAH" },
+        "test": "ORI FFH",
+        "result": { "A": "FFH","C": "0", "AC": "0", "Z": "1", "S": "1", "P": "0"  }
+      },
+      {
+        "test": "ORI B",
+        "result": { "Error": "SyntaxError" }
+    },
+    {
+        "test": "ORI ",
+        "result": { "Error": "TypeError" }
+    },
+    {
+        "test": "ORI, 80H",
+        "result": { "Error": "SyntaxError" }
+    }
+    ],
+
+    "XRA": [
+      {
+        "data": { "A": "A5H", "B": "55H" },
+        "test": "XRA B",
+        "result": { "A": "F0H","C": "0", "AC": "0", "Z": "0", "S": "1", "P": "0"  }
+      },
+      {
+        "data": { "A": "FFH", "C": "00H" },
+        "test": "XRA C",
+        "result": { "A": "FFH","C": "0", "AC": "0", "Z": "1", "S": "1", "P": "0"  }
+      },
+      {
+        "data": { "A": "0FH", "Memory": { "8000H": "03H" } },
+        "test": "XRA M",
+        "result": { "A": "0CH","C": "0", "AC": "1", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+        "data": { "A": "55H" },
+        "test": "XRA A",
+        "result": { "A": "00H","C": "0", "AC": "0", "Z": "1", "S": "0", "P": "1"  }
+      },
+      {
+        "data": { "A": "AAH", "B": "FFH" },
+        "test": "XRA B",
+        "result": { "A": "55H","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+        "test": "XRA 80H",
+        "result": { "Error": "SyntaxError" }
+      },
+      {
+        "test": "XRA F",
+        "result": { "Error": "RegisterError" }
+      },
+
+      {
+        "test": "XRA 8050H",
+        "result": { "Error": "SyntaxError" }
+      }
+      
+    ],
+
+    "XRI": [
+      {
+        "data": { "A": "A5H" },
+        "test": "XRI 55H",
+        "result": { "A": "F0H","C": "0", "AC": "0", "Z": "0", "S": "1", "P": "0"  }
+      },
+      {
+        "data": { "A": "FFH" },
+        "test": "XRI FFH",
+        "result": { "A": "00H","C": "0", "AC": "0", "Z": "1", "S": "0", "P": "1"  }
+      },
+      {
+        "data": { "A": "0FH" },
+        "test": "XRI 03H",
+        "result": { "A": "0CH","C": "0", "AC": "1", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+        "data": { "A": "55H" },
+        "test": "XRI 00H",
+        "result": { "A": "55H","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+        "data": { "A": "AAH" },
+        "test": "XRI FFH",
+        "result": { "A": "55H","C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+        "test": "XRI B",
+        "result": { "Error": "SyntaxError" }
+    },
+    {
+        "test": "XRI ",
+        "result": { "Error": "TypeError" }
+    },
+    {
+        "test": "XRI, 80H",
+        "result": { "Error": "SyntaxError" }
+    }
+    ],
+
+    "CMP": [
+      {
+        "data": { "A": "A5H", "B": "55H" },
+        "test": "CMP B",
+        "result": {"C": "0", "AC": "1", "Z": "0", "S": "0", "P": "1"  }
+      },
+      {
+        "data": { "A": "FFH", "C": "00H" },
+        "test": "CMP C",
+        "result": {"C": "0", "AC": "0", "Z": "1", "S": "1", "P": "0"  }
+      },
+      {
+        "data": { "A": "0FH", "Memory": { "8000H": "03H" } },
+        "test": "CMP M",
+        "result": {"C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+        "data": { "A": "55H" },
+        "test": "CMP A",
+        "result": {"C": "0", "AC": "0", "Z": "1", "S": "0", "P": "1"  }
+      },
+      {
+        "data": { "A": "AAH", "B": "FFH" },
+        "test": "CMP B",
+        "result": {"C": "1", "AC": "1", "Z": "0", "S": "1", "P": "1"  }
+      },
+      {
+        "test": "CMP 80H",
+        "result": { "Error": "SyntaxError" }
+      },
+      {
+        "test": "CMP F",
+        "result": { "Error": "RegisterError" }
+      },
+
+      {
+        "test": "CMP 8050H",
+        "result": { "Error": "SyntaxError" }
+      }
+    ],
+
+    "CPI": [
+      {
+        "data": { "A": "A5H" },
+        "test": "CPI 55H",
+        "result": {"C": "0", "AC": "1", "Z": "0", "S": "0", "P": "1"  }
+      },
+      {
+        "data": { "A": "FFH" },
+        "test": "CPI FFH",
+        "result": {"C": "0", "AC": "0", "Z": "1", "S": "1", "P": "0"  }
+      },
+      {
+        "data": { "A": "0FH" },
+        "test": "CPI 03H",
+        "result": {"C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+        "data": { "A": "55H" },
+        "test": "CPI 00H",
+        "result": {"C": "0", "AC": "0", "Z": "0", "S": "0", "P": "0"  }
+      },
+      {
+        "data": { "A": "AAH" },
+        "test": "CPI FFH",
+        "result": {"C": "1", "AC": "1", "Z": "0", "S": "1", "P": "1"  }
+      },
+      {
+        "test": "CPI B",
+        "result": { "Error": "SyntaxError" }
+      },
+      {
+        "test": "CPI ",
+        "result": { "Error": "TypeError" }
+      },
+      {
+        "test": "CPI, 80H",
+        "result": { "Error": "SyntaxError" }
+      }
+    ],
+
+  "JUMP": [
+    {
+      "test": "JMP 8000H",
+      "result": { "PC": "8000H" }
+    },
+    {
+      "test": "JC 8000H",
+      "flags": { "CY": "1" },
+      "result": { "PC": "8000H" }
+    },
+    {
+      "test": "JNC 8000H",
+      "flags": { "CY": "0" },
+      "result": { "PC": "8000H" }
+    },
+    {
+      "test": "JP 8000H",
+      "flags": { "S": "0" },
+      "result": { "PC": "8000H" }
+    },
+    {
+      "test": "JM 8000H",
+      "flags": { "S": "1" },
+      "result": { "PC": "8000H" }
+    },
+    {
+      "test": "JZ 8000H",
+      "flags": { "Z": "1" },
+      "result": { "PC": "8000H" }
+    },
+    {
+      "test": "JNZ 8000H",
+      "flags": { "Z": "0" },
+      "result": { "PC": "8000H" }
+    },
+    {
+      "test": "JPE 8000H",
+      "flags": { "P": "1" },
+      "result": { "PC": "8000H" }
+    },
+    {
+      "test": "JPO 8000H",
+      "flags": { "P": "0" },
+      "result": { "PC": "8000H" }
+    },
+    {
+      "test": "JMP",
+      "result":{"Error":"TypeError"} 
+    },
+    {
+      "test": "JMP A",
+      "result":{"Error":"MemoryError"}
+    },
+    {
+      "test": "JC",
+      "result":{"Error":"TypeError"} 
+    },
+    {
+      "test": "JNC B",
+      "result":{"Error":"MemoryError"}
+    },
+    {
+      "test": "JP",
+      "result":{"Error":"TypeError"} 
+    },
+    {
+      "test": "JM H",
+      "result":{"Error":"MemoryError"}
+    },
+    {
+      "test": "JZ",
+      "result":{"Error":"TypeError"} 
+    },
+    {
+      "test": "JNZ M",
+      "result":{"Error":"MemoryError"}
+    },
+    {
+      "test": "JPE",
+      "result":{"Error":"TypeError"} 
+    },
+    {
+      "test": "JPO A",
+      "result":{"Error":"MemoryError"}
+    },
+    {
+      "test": "JPO HL",
+      "result":{"Error":"MemoryError"}
+    },
+    {
+        "test": "JPO 80H",
+        "result":{"Error":"MemoryError"}
+    }
+
+  ],
+
+
+  "CALL_RETURN": [
+    {
+      "test": "CALL 8000H",
+      "result": { "PC": "8000H", "SP": "FFFFH" }
+    },
+    {
+      "test": "RET",
+      "result": { "PC": "8001H", "SP": "0000H" }
+    },
+    {
+      "test": "RC 8000H",
+      "flags": { "CY": "1" },
+      "result": { "PC": "8000H", "SP": "FFFFH" }
+    },
+    {
+      "test": "RC 8000H",
+      "flags": { "CY": "0" },
+      "result": { "PC": "8001H", "SP": "0000H" }
+    },
+    {
+      "test": "RNC 8000H",
+      "flags": { "CY": "0" },
+      "result": { "PC": "8000H", "SP": "FFFFH" }
+    },
+    {
+      "test": "RNC 8000H",
+      "flags": { "CY": "1" },
+      "result": { "PC": "8001H", "SP": "0000H" }
+    },
+    {
+      "test": "RP 8000H",
+      "flags": { "S": "0" },
+      "result": { "PC": "8000H", "SP": "FFFFH" }
+    },
+    {
+      "test": "RP 8000H",
+      "flags": { "S": "1" },
+      "result": { "PC": "8001H", "SP": "0000H" }
+    },
+    {
+      "test": "RM 8000H",
+      "flags": { "S": "1" },
+      "result": { "PC": "8000H", "SP": "FFFFH" }
+    },
+    {
+      "test": "RM 8000H",
+      "flags": { "S": "0" },
+      "result": { "PC": "8001H", "SP": "0000H" }
+    },
+    {
+      "test": "RZ 8000H",
+      "flags": { "Z": "1" },
+      "result": { "PC": "8000H", "SP": "FFFFH" }
+    },
+    {
+      "test": "RZ 8000H",
+      "flags": { "Z": "0" },
+      "result": { "PC": "8001H", "SP": "0000H" }
+    },
+    {
+      "test": "RNZ 8000H",
+      "flags": { "Z": "0" },
+      "result": { "PC": "8000H", "SP": "FFFFH" }
+    },
+    {
+      "test": "RNZ 8000H",
+      "flags": { "Z": "1" },
+      "result": { "PC": "8001H", "SP": "0000H" }
+    },
+    {
+      "test": "RPE 8000H",
+      "flags": { "P": "1" },
+      "result": { "PC": "8000H", "SP": "FFFFH" }
+    },
+    {
+      "test": "RPE 8000H",
+      "flags": { "P": "0" },
+      "result": { "PC": "8001H", "SP": "0000H" }
+    },
+    {
+      "test": "RPO 8000H",
+      "flags": { "P": "0" },
+      "result": { "PC": "8000H", "SP": "FFFFH" }
+    },
+    {
+      "test": "RPO 8000H",
+      "flags": { "P": "1" },
+      "result": { "PC": "8001H", "SP": "0000H" }
+    },
+    {
+        "test": "CALL",
+        "result":{"Error":"TypeError"} 
+      },
+      {
+        "test": "CALL C",
+        "result":{"Error":"MemoryError"}
+      },
+      {
+        "test": "CALL HL",
+        "result":{"Error":"MemoryError"}
+      },
+      {
+        "test": "RET A",
+        "result":{"Error":"MemoryError"} 
+      },
+      {
+        "test": "RET HL",
+        "result":{"Error":"MemoryError"}
+      },
+      {
+        "test": "RC",
+        "result":{"Error":"TypeError"}
+      },
+      
+      {
+        "test": "RC A",
+        "result":{"Error":"MemoryError"}
+      }
+  ]
+
+}
+
+  
+
+  
+  
+  
+  
